@@ -4,6 +4,7 @@ const axios = require('axios');
 
 const express = require('express')
 const app = express()
+var port = process.env.PORT || 8080;
 
 
 app.get('/parkings', async (req, res) => {
@@ -18,6 +19,6 @@ app.get('/parkings', async (req, res) => {
 
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log("Serveur à l'écoute")
 })
